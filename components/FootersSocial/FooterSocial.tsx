@@ -1,11 +1,10 @@
-import { createStyles, Container, Group, ActionIcon, rem, MantineProvider, Text } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandDiscord } from '@tabler/icons-react';
+import { createStyles, Container, Group, rem, MantineProvider, Text } from '@mantine/core';
 import Image from 'next/image';
 
 const useStyles = createStyles((theme) => ({
   footer: {
-    height: -500,
-    marginTop: rem(1),
+    height: 50,
+    marginTop: rem(10),
     borderTop: `${rem(2)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.red[9] : theme.colors.red[9]
     }`,
@@ -15,8 +14,9 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingTop: theme.spacing.xs,
-    paddingBottom: theme.spacing.xs,
+    paddingTop: 25,
+    background: 'red.9',
+    paddingBottom: 0,
 
     [theme.fn.smallerThan('xs')]: {
       flexDirection: 'column',
@@ -25,7 +25,7 @@ const useStyles = createStyles((theme) => ({
 
   links: {
     [theme.fn.smallerThan('xs')]: {
-      marginTop: theme.spacing.md,
+      marginTop: 50,
     },
   },
 }));
@@ -35,25 +35,28 @@ export function FooterSocial() {
 
   return (
     <MantineProvider>
-      <div className="main-footer sticky-bottom">
-    <div style={{ position: 'fixed', bottom: 0, right: 0, left: 0, width: '100%', height: 75 }} className={classes.footer}>
-      <Text size="xl" ml={-1100} color={theme.colorScheme === 'dark' ? 'white' : 'black'}>
-        Managed by the Systems Department
-      </Text>
-      <Container className={classes.inner}>
-      <Group ml={-400}>
-      <Image src="vaklogosvg.svg" alt="VAK Logo" width={40} height={40} style={{ position: 'fixed', bottom: 0, left: 0, width: '100%', height: 75 }} />
+      <div className="main-footer" style={{ bottom: 0, left: 0, right: 0, position: 'absolute' }}>
+    <div className={classes.footer}>
+      <Container className={classes.inner} my={-15} style={{ bottom: 0, width: '100%', height: 0 }}>
+      <Group mb={-30} ml={-450}>
+      <Image src="vaklogosvg.svg" alt="VAK Logo" width={40} height={40} style={{ width: '100%' }} />
       </Group>
-        <Group spacing={0} className={classes.links} position="right" noWrap mr={-400}>
-          <ActionIcon size="lg">
-            <IconBrandTwitter size="1.05rem" stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <IconBrandYoutube size="1.05rem" stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <IconBrandDiscord size="1.05rem" stroke={1.5} />
-          </ActionIcon>
+      <Text mb={-30} ml={-1200} size="l" color={theme.colorScheme === 'dark' ? 'dimmed' : 'dimmed'}>
+          Managed by the Systems Department
+      </Text>
+        <Group spacing={50} className={classes.links} position="right" noWrap mb={-30} mr={-450}>
+          <Text size="l" color={theme.colorScheme === 'dark' ? 'dimmed' : 'dimmed'}>
+          Contact
+          </Text>
+          <Text size="l" color={theme.colorScheme === 'dark' ? 'dimmed' : 'dimmed'}>
+          Text
+          </Text>
+          <Text size="l" color={theme.colorScheme === 'dark' ? 'dimmed' : 'dimmed'}>
+          Text
+          </Text>
+          <Text size="l" color={theme.colorScheme === 'dark' ? 'dimmed' : 'dimmed'}>
+          Text
+          </Text>
         </Group>
       </Container>
     </div>

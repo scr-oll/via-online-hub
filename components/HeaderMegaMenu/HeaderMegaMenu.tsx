@@ -68,7 +68,7 @@ import {
       marginTop: theme.spacing.sm,
       padding: `${theme.spacing.md} calc(${theme.spacing.md} * 2)`,
       paddingBottom: theme.spacing.xl,
-      borderTop: `${rem(1)} solid ${
+      borderTop: `${rem(2)} solid ${
         theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1]
       }`,
     },
@@ -147,9 +147,11 @@ import {
         <Header height={60} px="md" color="red">
           <Group position="apart" sx={{ height: '100%' }}>
             <Image src="vaklogosvg.svg" alt="VAK Logo" width={50} height={50} />
+            <Center inline>
             <Text size="xl" ml={-1100} color={theme.colorScheme === 'dark' ? 'white' : 'black'}>
               Vaktovian Online Hub
             </Text>
+            </Center>
             <Group sx={{ height: '100%' }} spacing={30} className={classes.hiddenMobile}>
               <a href="#" className={classes.link}>
               <Text size="m" color="dimmed">
@@ -258,7 +260,7 @@ import {
             <Group position="center" grow pb="xl" px="md" />
           </ScrollArea>
         </Drawer>
-        <Box h={1} mt={-1} c="red.9" bg="red.9"> </Box>
+        <Box h={rem(3)} c="red.9" bg="red.9"> </Box>
       </Box>
     );
   }
