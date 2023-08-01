@@ -1,8 +1,11 @@
 {
-  "name": "mantine-next-template",
+  "name": "via-online-hub",
+  "homepage": "https://levi-dl.github.io/via-online-hub",
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "analyze": "ANALYZE=true next build",
@@ -77,6 +80,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.5.7",
     "eslint-plugin-testing-library": "^5.2.0",
+    "gh-pages": "^5.0.0",
     "jest": "^27.5.1",
     "prettier": "^2.7.1",
     "storybook-addon-turbo-build": "^1.1.0",
