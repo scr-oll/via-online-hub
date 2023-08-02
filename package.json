@@ -1,5 +1,5 @@
 {
-  "name": "mantine-next-template",
+  "name": "via-online-hub",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -37,7 +37,7 @@
     "@mantine/tiptap": "^6.0.17",
     "@next/bundle-analyzer": "^13.1.6",
     "@tabler/icons": "^1.107.0",
-    "@tabler/icons-react": "^2.29.0",
+    "@tabler/icons-react": "^2.30.0",
     "@tiptap/extension-link": "^2.0.4",
     "@tiptap/react": "^2.0.4",
     "@tiptap/starter-kit": "^2.0.4",
